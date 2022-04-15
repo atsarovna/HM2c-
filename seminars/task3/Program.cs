@@ -12,5 +12,5 @@ if (a % b == 0)
 }
 else 
 {
-    Console.WriteLine("Не кратно, остаток " + a % b);
+    Console.WriteLine("Не кратно, остаток от деления = " + a % b);
 }
