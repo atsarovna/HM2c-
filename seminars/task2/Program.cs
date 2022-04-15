@@ -10,10 +10,10 @@
     //Console.Write(digit1);
 
     int n = new Random().Next(100, 1000);
-    int digit1 = n % 10; // сотые
+    int digit1 = n % 10; // нахождение последней цифры
     //int digit2 = (n / 10) % 10; =  N / 10 и остаток от 10 убирается
-    int digit3 = n / 100;
-    int NewN = digit3 * 10 + digit1;
+    int digit3 = n / 100; //нахождение первой цифры
+    int NewN = digit3 * 10 + digit1; //
 
     Console.WriteLine("Для числа N: ");
     Console.WriteLine(n);
