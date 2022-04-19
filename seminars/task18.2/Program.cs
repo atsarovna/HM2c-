@@ -64,9 +64,10 @@ void GetCoordinates(int quater)
     }
 }
 */
+
 // решение 3
 
-Console.Write("Enter quater from 1 to 4: ");
+/*Console.Write("Enter quater from 1 to 4: ");
 int quarter = Convert.ToInt32(Console.ReadLine());
 
 if (quarter <= 0 || quarter >= 5)
@@ -91,3 +92,51 @@ if (quarter == 4)
 {
     Console.WriteLine($"Range for quarter № {quarter} - x (0, {Int16.MaxValue}) и y ({Int16.MinValue}, 0)");
 }
+*/
+
+// решение 4
+Console.Write("Enter quater from 1 to 4: ");
+int quarter = Convert.ToInt32(Console.ReadLine());
+
+if (quarter < 1 || quarter > 4)
+{
+    Console.WriteLine("Enter correct number of quarter");
+    return;
+}
+
+int minX = 0;
+int minY = 0;
+int maxX = 0;
+int maxY = 0;
+
+if (quarter == 1)
+{
+    minX = 1;
+    minY = 1;
+    maxX = Int16.MaxValue;
+    maxY = Int16.MaxValue;
+}
+if (quarter == 2)
+{
+    minX = Int16.MinValue;
+    minY = 1;
+    maxX = -1;
+    maxY = Int16.MaxValue;
+}
+if (quarter == 3)
+{
+    minX = Int16.MinValue;
+    minY = Int16.MinValue;
+    maxX = -1;
+    maxY = -1;
+}
+if (quarter == 4)
+{
+    minX = 1;
+    minY= Int16.MinValue;
+    maxX = Int16.MaxValue;
+    maxY = -1;
+}
+Console.WriteLine($"Range X is: from {minX} to {maxX}");
+Console.WriteLine($"Range Y is: from {minY} to {maxY}");
+
