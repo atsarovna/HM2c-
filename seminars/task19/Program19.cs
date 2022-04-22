@@ -19,3 +19,31 @@ if (n < 99999 && n > 0)
 }
 else
     Console.WriteLine("Incorrect number.Enter 5 digit number: ");
+
+
+    // пыталась придумать другое решение, но не додумалась как правильно. оставляю для себя на будущее.
+
+/* string number = n.ToString();
+if(number.Length == 5) // проверка на 5 значное число
+if(n<0) n=-n; //проверка на отрицательные числа
+
+
+
+Console.WriteLine("Работает");
+else
+Console.WriteLine("Incorrect.Enter 5 digit number: "); */
+
+/* int temp = n; // временная переменная со значением числа n
+int rev = 0; // переменная для числа в обратном порядке
+
+while (n > 0)
+{
+    /* int dig1 = n/1000;
+    int dig2 = dig1 % 10;
+    int dig4 = (n/10) % 10; */
+/* int dig5 = n % 10; // 5 цифра
+int rev = rev * 10 + dig5;
+n = n/10;
+}
+if (temp == rev)
+Console.WriteLine("Палиндром");   */
