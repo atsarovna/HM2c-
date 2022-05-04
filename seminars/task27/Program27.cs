@@ -4,8 +4,13 @@
 82 -> 10
 9012 -> 12 */
 
+int number;
 Console.Write("Enter the number: ");
-int number = Convert.ToInt32(Console.ReadLine());
+while (!int.TryParse(Console.ReadLine(), out number) || number < 0)
+{
+    Console.WriteLine("Wrong number, try again");
+}
+
 int sum = 0;
 
 /* while(number > 0) */ for(int i = number;i > 0; i--) //считаем с конца
