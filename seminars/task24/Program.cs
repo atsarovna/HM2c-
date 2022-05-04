@@ -29,3 +29,5 @@ for(int i = 1;i <= number; i++)
     sum += i;
 }
 Console.WriteLine("Sum of numbers is: " + sum); 
+
+// sum = (number + 1) * number/2;  - формула вычисления суммы от 1 до N
