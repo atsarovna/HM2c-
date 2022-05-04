@@ -8,7 +8,7 @@
 /* Console.Write("Enter the number: ");
 string number = Console.ReadLine();
 int count = number.Length;
-Console.WriteLine($"Count of numbers is: {count}"); */
+Console.WriteLine($"Count of numbers is: {count}"); */ //здесь могут ввести и буквы, нет проверки на цифры
 
 //2 способ:через цикл for 
 /* Console.Write("Enter the number: ");

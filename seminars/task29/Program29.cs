@@ -6,7 +6,7 @@
 
 int[] array = new int[8];
 
-int min;
+/* int min;
 
 Console.Write("Enter minimum number in array: ");
 while (!int.TryParse(Console.ReadLine(), out min) || min < 0) //введенную строку записать в переменную до тех пор пока не успешно строка преобразована в число, я буду повторять попытку ввода до тех пор пока это не будет число и не будет положительным. проверка на буквы и отрицательные, если будет так,то будет повторять ввести верное число
@@ -28,4 +28,16 @@ for (int i = 0; i < array.Length; i++)
 {
     array[i] = new Random().Next(min, max);
     Console.Write(array[i] + " ");
+} */
+
+for (int i = 0; i < array.Length; i++) 
+{
+    array[i] = new Random().Next(0, 2);
+    if (i == 0) //цикл проверки на последнюю цифру,чтобы не было в конце запятой
+        Console.Write($"[{array[i]}, ");
+    else if (i == array.Length - 1)
+        Console.Write($"{array[i]}]");
+    else
+        Console.Write($"{array[i]}, ");
 }
+Console.WriteLine();
