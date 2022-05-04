@@ -10,7 +10,6 @@ Console.Write("Please enter positive integer number: ");
 while(!int.TryParse(Console.ReadLine(), out number) || number < 0)
 {
     Console.WriteLine("Wrong number, try again");
-    Console.Write("Please enter positive integer number: ");
 }
 
 /* Console.Write("Enter positive integer number: ");
