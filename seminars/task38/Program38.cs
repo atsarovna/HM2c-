@@ -11,14 +11,14 @@ while (!int.TryParse(Console.ReadLine(), out count) || count < 0)
     Console.WriteLine("Wrong number, try again");
 }
 
-double[] array = new double[count];
+int[] array = new int[count];
 
 FillArray(array);
 PrintArray(array);
 
-double max = 0;
-double min = 0;
-double diff = 0;
+int max = 0;
+int min = 0;
+int diff = 0;
 for (int i = 0; i < array.Length; i++)
 {
     if (max <= array[i])
@@ -33,7 +33,7 @@ for (int i = 0; i < array.Length; i++)
 }
 Console.Write($" -> {diff}");
 
-void FillArray(double[] array)
+void FillArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -41,7 +41,7 @@ void FillArray(double[] array)
     }
 }
 
-void PrintArray(double[] array)
+void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
