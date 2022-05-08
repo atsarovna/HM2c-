@@ -9,7 +9,7 @@ WriteArray(numbers);
 
 for (int i = 0; i < numbers.Length; i++)
 {
-    numbers[i] *= -1;
+    numbers[i] *= -1; //array[i] = -array[i]
     {
         if (i == 0)
             Console.Write($" -> [{numbers[i]}, ");
