@@ -15,11 +15,18 @@ double k1 = InputNumbers("k1");
 double b1 = InputNumbers("b1");
 double k2 = InputNumbers("k2");
 double b2 = InputNumbers("b2");
- 
-double x = -(b1 - b2) / (k1 - k2); //вывела X из двух уравнений, подставив второе в первое
-double y = k1 * x + b1; //подставляем значение x в любое уравнение
- 
-x = Math.Round(x,2); //Math.Round - Округляет значение до ближайшего целого или указанного количества десятичных знаков.
-y = Math.Round(y,2);
- 
-Console.WriteLine($"The intersection point of two straight lines: ({x};{y})");
+
+if (k1 == k2 && b1 == b2) //проверка совпадают линии или нет(лежат друг на друге)
+    Console.WriteLine("Lines don't have a crosspoint! Lines are stack on top of each other.");
+else if (k1 == k2) //проверка параллельность
+    Console.WriteLine("Lines don't have a crosspoint! Lines are parallel.");
+else
+{
+    double x = -(b1 - b2) / (k1 - k2); //вывела X из двух уравнений, подставив второе в первое
+    double y = k1 * x + b1; //подставляем значение x в любое уравнение
+
+    x = Math.Round(x, 2); //Math.Round - Округляет значение до ближайшего целого или указанного количества десятичных знаков.
+    y = Math.Round(y, 2);
+
+    Console.WriteLine($"The intersection point of two straight lines: ({x};{y})");
+}
