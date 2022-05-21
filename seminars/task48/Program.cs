@@ -9,37 +9,37 @@ m = 3, n = 4.
 int m = InputValue("lines"); //строки
 int n = InputValue("columns"); //столбцы
 
-int[,] array = new int[m, n];
+int[,] arr = new int[m, n];
 
-FillArray(array);
+FillArray(arr);
 
-PrintArray(array);
+PrintArray(arr);
 
-int InputValue(string n)
+int InputValue(string element)
 {
     int value;
-    Console.Write($"Enter count of {n}: ");
+    Console.Write($"Enter count of {element}: ");
     while (!int.TryParse(Console.ReadLine(), out value))
     {
         Console.WriteLine("Error. Try again.");
-        Console.Write($"Enter count of {n}: ");
+        Console.Write($"Enter count of {element}: ");
     }
     return value;
 }
 
-void FillArray(int[,] array)
+void FillArray(int[,] inputArray)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
-        for (int j = 0; j < array.GetLength(1); j++)
-            array[i, j] = i + j;
+    for (int i = 0; i < inputArray.GetLength(0); i++)
+        for (int j = 0; j < inputArray.GetLength(1); j++)
+            inputArray[i, j] = i + j;
 }
 
-void PrintArray(int[,] array)
+void PrintArray(int[,] inputArray)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < inputArray.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
-            Console.Write(array[i, j] + " ");
+        for (int j = 0; j < inputArray.GetLength(1); j++)
+            Console.Write(inputArray[i, j] + " ");
     Console.WriteLine();
     }
 }
