@@ -5,7 +5,7 @@ m = 3, n = 4.
 5 -2 33 -2
 77 3 8 1 */
 
-const int m = 4; //задаем кол-во столбцов. comst - потому что зафиксированные числа и меняться не будут
+/* const int m = 4; //задаем кол-во столбцов. const - потому что зафиксированные числа и меняться не будут
 const int n = 3; //кол-во строк
 
 int[,] arr = new int[m, n]; // создаю двумерный массив,выделяю память для массива с n строками и m колонками
@@ -30,4 +30,28 @@ void PrintArray(int[,] array)
     for (int i = 0; i < array.GetLength(0); i++)
         for (int j = 0; j < array.GetLength(1); j++)
             Console.WriteLine($"array[{i},{j}] = {array[i, j]}");
+} */
+
+Console.Write("Введите m: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите n: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int[,] array = new int[m, n];
+
+for (int i = 0; i < m; i++) //цикл строки
+{
+    for (int j = 0; j < n; j++)
+    {
+        array[i, j] = new Random().Next(-10, 101);
+    }
+}
+
+for (int i = 0; i < m; i++) //цикл строки
+{
+    for (int j = 0; j < n; j++)
+    {
+        Console.Write(array[i, j] + " ");
+    }
+    Console.WriteLine();
 }
