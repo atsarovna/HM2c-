@@ -40,6 +40,6 @@ void PrintArray(int[,] inputArray)
     {
         for (int j = 0; j < inputArray.GetLength(1); j++)
             Console.Write(inputArray[i, j] + " ");
-    Console.WriteLine();
+        Console.WriteLine();
     }
 }
