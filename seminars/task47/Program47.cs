@@ -34,13 +34,13 @@ void FillArray(double[,] array, int minValue, int maxValue)
             array[i, j] = Math.Round((rnd.NextDouble() * (maxValue - minValue) + minValue), 1);
 }
 
-void PrintArray(double[,] array)
+void PrintArray(double[,] Array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < Array.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < Array.GetLength(1); j++)
         {
-            Console.Write("{0,6:F2}", array[i, j] + " ");
+            Console.Write("{0,6:F2}", Array[i, j] + " ");
         }
         Console.WriteLine();
     }

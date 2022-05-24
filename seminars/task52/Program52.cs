@@ -33,36 +33,36 @@ int InputValue(string element)
     return value;
 }
 
-void FillArray(int[,] arr, int min, int max)
+void FillArray(int[,] array, int min, int max)
 {
     Random rnd = new Random();
 
-    for (int i = 0; i < arr.GetLength(0); i++)
-        for (int j = 0; j < arr.GetLength(1); j++)
-            arr[i, j] = rnd.Next(min, max);
+    for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
+            array[i, j] = rnd.Next(min, max);
 }
 
-void PrintArray(int[,] arr)
+void PrintArray(int[,] Array)
 {
-    for (int i = 0; i < arr.GetLength(0); i++)
+    for (int i = 0; i < Array.GetLength(0); i++)
     {
-        for (int j = 0; j < arr.GetLength(1); j++)
-            Console.Write(arr[i, j] + " ");
+        for (int j = 0; j < Array.GetLength(1); j++)
+            Console.Write(Array[i, j] + " ");
         Console.WriteLine();
     }
 }
 
 //поиск среднего арифметического
-void ArithmeticMeanColumn(int[,] arr)
+void ArithmeticMeanColumn(int[,] inputArray)
 {
     int count = 1;
-    for (int i = 0; i < arr.GetLength(1); i++)
+    for (int i = 0; i < inputArray.GetLength(1); i++)
     {
         double arithmeticMean = 0;
         double sum = 0;
-        for (int j = 0; j < arr.GetLength(0); j++)
+        for (int j = 0; j < inputArray.GetLength(0); j++)
         {
-            sum += arr[j, i];
+            sum += inputArray[j, i];
             arithmeticMean = sum / lines;
         }
 
