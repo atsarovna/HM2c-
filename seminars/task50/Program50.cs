@@ -60,7 +60,25 @@ void PrintArray(int[,] inputArray)
     }
 }
 
+//замена строк на столбцы
+void SwapLines(int[,] inputArray)
+{
+    if (inputArray.GetLength(0) == inputArray.GetLength(1))
+        for (int i = 0; i < inputArray.GetLength(0) - 1; i++)
+        {
+            for (int j = i + 1; j < inputArray.GetLength(1); j++)
+            {
+                int temp = inputArray[i, j];
+                inputArray[i, j] = inputArray[j, i];
+                inputArray[j, i] = temp;
 
+
+
+            }
+        }
+    else
+        Console.WriteLine("Count of lines != count of columns. Can't be replaced.");
+}
 
 
 

@@ -9,11 +9,11 @@ int columns = InputValue("columns");
 int[,] array = new int[lines, columns];
 
 FillArray(array, 0, 10);
-Console.WriteLine();
 PrintArray(array);
 Console.WriteLine();
 
 SwapLines(array);
+Console.WriteLine();
 PrintArray(array);
 
 int InputValue(string element)
@@ -43,24 +43,18 @@ void PrintArray(int[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
             Console.Write(arr[i, j] + " ");
-        Console.Write();
+         Console.WriteLine();
     }
 }
 
 //смена первой и последней строки
 void SwapLines(int[,] arr)
 {
-                            int temp = 0;
-    for (int i = 0; i < arr.GetLength(1); i++)
+    for (int j = 0; j < arr.GetLength(0); j++)
+
     {
-        for (int j = 0; j < arr.GetLength(0); j++)
-
-        {
-
-                temp = arr[i, j];
-                arr[i, j] = arr[lines - 1, j];
-                arr[lines - 1, j] = temp;
-        }
+        int temp = arr[0, j];
+        arr[0, j] = arr[lines - 1, j];
+        arr[lines - 1, j] = temp;
     }
-    Console.WriteLine(arr[i, j]);
 }
