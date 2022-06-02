@@ -58,23 +58,19 @@ void SumMinimal(int[,] inputArray)
         for (int j = 0; j < inputArray.GetLength(1); j++)
         {
             sum2 += inputArray[i, j];
-        }    
-            if(sum2 < sum1)
-            {
-                sum = sum2;
-                index = i+1;
-            }
-            sum1 = sum2;
+        }
+        if (sum2 < sum1)
+        {
+            sum = sum2;
+            index = i + 1;
+        }
+        sum1 = sum2;
         Console.WriteLine($"Sum of elements in {countLines} line: {sum2}");
 
         countLines++;
-
-        //Console.WriteLine($"Minimal sum of elements in {index} line: {min}");
-
     }
     Console.WriteLine($"Minimal sum of elements in {index} line: {sum}");
-        Console.WriteLine($"Number of line is: {index}");
-
+    Console.WriteLine($"Number of line is: {index}");
 }
 
 

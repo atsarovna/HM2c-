@@ -27,8 +27,6 @@ Console.WriteLine();
 PrintArray(arr);
 Console.WriteLine();
 
-ArithmeticMeanColumn(arr);
-
 int InputValue(string element)
 {
     int value;
@@ -60,19 +58,26 @@ void PrintArray(int[,] Array)
     }
 }
 
-int sum = 0;
+double length = 10;
+for (int i = 0; i < length; i++)
+{
+    double result = CheckNumber(i);
+    if (result != 0)
+        Console.WriteLine($"Entered number {i} meets {result} times.");
+}
 
-double NumberOf(double number)
+double CheckNumber(double number)
 {
     int count = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < arr.GetLength(1); j++)
         {
-            if (number = array[i,j])
+            if (number == arr[i, j])
             {
                 count++;
             }
         }
     }
- }
+    return count;
+}
